@@ -1,0 +1,604 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --forest: #173f35;
+    --forest-dark: #10332b;
+    --forest-light: #e8f1ed;
+
+    --gold: #b58a45;
+    --gold-light: #f6efdf;
+
+    --cream: #f7f5ef;
+    --white: #ffffff;
+
+    --text: #24302d;
+    --muted: #71807b;
+
+    --border: #e2e7e4;
+
+    --danger: #b94a48;
+    --danger-light: #faeceb;
+
+    --success: #2f765d;
+    --success-light: #e9f4ef;
+
+    --shadow: 0 10px 35px rgba(23, 63, 53, 0.07);
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+
+/* HEADER */
+
+.admin-header {
+    min-height: 82px;
+    padding: 16px 5%;
+
+    background: var(--forest);
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.brand-icon {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-icon svg {
+    width: 25px;
+    height: 25px;
+
+    stroke: white;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.brand h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+}
+
+.brand p {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 12px;
+}
+
+
+.logout-btn {
+    border: 1px solid rgba(255,255,255,0.25);
+
+    background: transparent;
+    color: white;
+
+    padding: 10px 16px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-family: inherit;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.logout-btn svg {
+    width: 17px;
+    height: 17px;
+
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.logout-btn:hover {
+    background: white;
+    color: var(--forest);
+}
+
+
+/* MAIN */
+
+.admin-container {
+    width: min(94%, 1280px);
+    margin: 0 auto;
+
+    padding: 42px 0 70px;
+}
+
+.page-heading {
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.6px;
+
+    margin-bottom: 5px;
+}
+
+.page-heading h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 34px;
+
+    color: var(--forest);
+
+    margin-bottom: 5px;
+}
+
+.page-heading p {
+    color: var(--muted);
+}
+
+
+/* SECTION */
+
+.admin-section {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    padding: 26px;
+
+    margin-bottom: 24px;
+
+    box-shadow: var(--shadow);
+}
+
+.section-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 24px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+}
+
+.section-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 11px;
+
+    background: var(--forest-light);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.section-icon svg {
+    width: 21px;
+    height: 21px;
+
+    stroke: var(--forest);
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.section-title h2 {
+    font-size: 18px;
+
+    color: var(--forest);
+
+    margin-bottom: 2px;
+}
+
+.section-title p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+
+/* BUTTONS */
+
+.primary-btn,
+.secondary-btn,
+.delete-btn,
+.pay-btn,
+.resolve-btn,
+.edit-btn {
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 10px 15px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.primary-btn {
+    background: var(--forest);
+    color: white;
+}
+
+.primary-btn:hover {
+    background: var(--forest-dark);
+    transform: translateY(-1px);
+}
+
+.primary-btn span {
+    font-size: 17px;
+    margin-right: 4px;
+}
+
+.secondary-btn {
+    background: #f1f4f2;
+
+    color: var(--forest);
+
+    border: 1px solid var(--border);
+}
+
+.secondary-btn:hover {
+    background: var(--forest-light);
+}
+
+.delete-btn {
+    background: var(--danger) !important;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #983b39 !important;
+}
+
+.pay-btn,
+.resolve-btn {
+    background: var(--success) !important;
+    color: white;
+}
+
+.pay-btn:hover,
+.resolve-btn:hover {
+    background: #255f4a !important;
+}
+
+.edit-btn {
+    background: var(--gold) !important;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #9d763c !important;
+}
+
+
+/* FORM */
+
+.form-container {
+    background: #fafbf9;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 22px;
+
+    margin-bottom: 24px;
+}
+
+.hidden {
+    display: none;
+}
+
+.form-heading {
+    margin-bottom: 20px;
+}
+
+.form-heading h3 {
+    color: var(--forest);
+
+    font-size: 17px;
+
+    margin-bottom: 3px;
+}
+
+.form-heading p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.form-container form {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 17px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.input-group label {
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #4d5c57;
+}
+
+.form-container input {
+    width: 100%;
+
+    padding: 11px 13px;
+
+    border: 1px solid #d6ddda;
+
+    border-radius: 8px;
+
+    background: white;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    color: var(--text);
+}
+
+.form-container input:focus {
+    outline: none;
+
+    border-color: var(--forest);
+
+    box-shadow: 0 0 0 3px rgba(23, 63, 53, 0.08);
+}
+
+.form-actions {
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    gap: 10px;
+
+    padding-top: 3px;
+}
+
+
+/* TABLE */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.book-table,
+.member-table,
+.issue-table,
+.query-table {
+    width: 100%;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+
+    min-width: 760px;
+
+    font-size: 13px;
+}
+
+.book-table th,
+.member-table th,
+.issue-table th,
+.query-table th {
+    background: #f5f7f5;
+
+    color: #64736e;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+
+    font-weight: 700;
+
+    padding: 13px 14px;
+
+    border-bottom: 1px solid var(--border);
+
+    text-align: left;
+}
+
+.book-table td,
+.member-table td,
+.issue-table td,
+.query-table td {
+    padding: 15px 14px;
+
+    border-bottom: 1px solid #edf0ee;
+
+    color: #44524e;
+
+    vertical-align: middle;
+}
+
+.book-table tbody tr:hover,
+.member-table tbody tr:hover,
+.issue-table tbody tr:hover,
+.query-table tbody tr:hover {
+    background: #fafcfb;
+}
+
+.book-table tbody tr:last-child td,
+.member-table tbody tr:last-child td,
+.issue-table tbody tr:last-child td,
+.query-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* STATUS */
+
+.status-paid,
+.status-pending,
+.status-available,
+.status-unavailable,
+.status-resolved,
+.status-open {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.status-paid,
+.status-available,
+.status-resolved {
+    color: var(--success);
+
+    background: var(--success-light);
+}
+
+.status-pending,
+.status-unavailable,
+.status-open {
+    color: #a54b45;
+
+    background: var(--danger-light);
+}
+
+.no-data {
+    text-align: center;
+
+    padding: 40px 20px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+.action-btn {
+    margin-right: 5px;
+    margin-bottom: 4px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .admin-header {
+        padding: 15px 20px;
+    }
+
+    .brand h1 {
+        font-size: 21px;
+    }
+
+    .brand-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .admin-container {
+        width: 92%;
+
+        padding-top: 30px;
+    }
+
+    .page-heading h2 {
+        font-size: 28px;
+    }
+
+    .admin-section {
+        padding: 20px;
+    }
+
+    .section-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .form-container form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        grid-column: auto;
+    }
+
+    .logout-btn span {
+        display: none;
+    }
+
+    .logout-btn {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Digital Library | Register</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin
+    >
+
+    <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+            rel="stylesheet"
+    >
+
+    <link
+            rel="stylesheet"
+            href="/css/auth.css"
+    >
+
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-card">
+
+        <div class="auth-brand">
+
+            <div class="auth-icon">
+
+                <svg viewBox="0 0 24 24" fill="none">
+
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/>
+
+                </svg>
+
+            </div>
+
+        </div>
+
+        <h1>Digital Library</h1>
+
+        <p class="subtitle">
+            Create your account
+        </p>
+
+
+        <form id="registerForm">
+
+            <label for="registerUsername">
+                Username
+            </label>
+
+            <input
+                    type="text"
+                    id="registerUsername"
+                    placeholder="Choose a username"
+                    required
+            >
+
+
+            <label for="displayName">
+                Display Name
+            </label>
+
+            <input
+                    type="text"
+                    id="displayName"
+                    placeholder="Enter your name"
+                    required
+            >
+
+
+            <label for="registerPassword">
+                Password
+            </label>
+
+            <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="Create a password"
+                    required
+            >
+
+
+            <button type="submit">
+                Create Account
+            </button>
+
+        </form>
+
+
+        <p id="registerMessage"></p>
+
+
+        <p class="auth-link">
+
+            Already have an account?
+
+            <a href="/login.html">
+                Login
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+
+<script src="/js/register.js"></script>
+
+</body>
+
+</html>

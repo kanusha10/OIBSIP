@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Digital Library | My Library</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+            rel="stylesheet"
+    >
+
+    <link
+            rel="stylesheet"
+            href="/css/user-dashboard.css"
+    >
+
+</head>
+
+<body>
+
+<header class="dashboard-header">
+
+    <div class="brand">
+
+        <div class="brand-icon">
+
+            <svg viewBox="0 0 24 24" fill="none">
+
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/>
+
+            </svg>
+
+        </div>
+
+        <div>
+
+            <h1>Digital Library</h1>
+
+            <p>
+                Welcome back,
+                <span id="welcomeName"></span>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <button
+            id="logoutBtn"
+            class="logout-btn"
+    >
+
+        Logout
+
+        <svg viewBox="0 0 24 24" fill="none">
+
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+
+            <path d="m16 17 5-5-5-5"/>
+
+            <path d="M21 12H9"/>
+
+        </svg>
+
+    </button>
+
+</header>
+
+
+<main class="dashboard-container">
+
+
+    <!-- HERO -->
+
+    <section class="library-hero">
+
+        <div>
+
+            <span class="eyebrow">
+                YOUR DIGITAL LIBRARY
+            </span>
+
+            <h2>
+                Discover your next<br>
+                great read.
+            </h2>
+
+            <p>
+                Explore books, borrow what interests you,
+                and keep track of everything you have checked out.
+            </p>
+
+        </div>
+
+
+        <div class="hero-decoration">
+
+            <svg viewBox="0 0 24 24" fill="none">
+
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/>
+
+                <path d="M8 7h8"/>
+
+                <path d="M8 11h6"/>
+
+            </svg>
+
+        </div>
+
+    </section>
+
+
+    <!-- LIBRARY BOOKS -->
+
+    <section class="dashboard-section">
+
+        <div class="section-header">
+
+            <div class="section-title">
+
+                <div class="section-icon">
+
+                    <svg viewBox="0 0 24 24" fill="none">
+
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/>
+
+                    </svg>
+
+                </div>
+
+                <div>
+
+                    <h2>Library Collection</h2>
+
+                    <p>Find books by title or author</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="search-box">
+
+                <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search books..."
+                >
+
+                <button
+                        id="searchBtn"
+                        class="search-btn"
+                >
+                    Search
+                </button>
+
+                <button
+                        id="showAllBtn"
+                        class="show-all-btn"
+                >
+                    All Books
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div
+                id="booksContainer"
+                class="books-grid"
+        ></div>
+
+    </section>
+
+
+    <!-- MY BOOKS -->
+
+    <section class="dashboard-section">
+
+        <div class="section-title">
+
+            <div class="section-icon">
+
+                <svg viewBox="0 0 24 24" fill="none">
+
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/>
+
+                    <path d="M8 7h8"/>
+
+                    <path d="M8 11h6"/>
+
+                </svg>
+
+            </div>
+
+
+            <div>
+
+                <h2>My Books</h2>
+
+                <p>
+                    Books currently borrowed from the library
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div id="issuesContainer"></div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="dashboard-section">
+
+        <div class="section-title">
+
+            <div class="section-icon">
+
+                <svg viewBox="0 0 24 24" fill="none">
+
+                    <rect
+                            x="3"
+                            y="5"
+                            width="18"
+                            height="14"
+                            rx="2"
+                    />
+
+                    <path d="m3 7 9 6 9-6"/>
+
+                </svg>
+
+            </div>
+
+
+            <div>
+
+                <h2>Contact Library</h2>
+
+                <p>
+                    Have a question? Send a message to the library team.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <form
+                id="contactForm"
+                class="contact-form"
+        >
+
+            <div class="contact-row">
+
+                <div class="input-group">
+
+                    <label for="contactName">
+                        Name
+                    </label>
+
+                    <input
+                            type="text"
+                            id="contactName"
+                            placeholder="Your name"
+                            required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="contactEmail">
+                        Email
+                    </label>
+
+                    <input
+                            type="email"
+                            id="contactEmail"
+                            placeholder="Your email"
+                            required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="contactMessage">
+                    Message
+                </label>
+
+                <textarea
+                        id="contactMessage"
+                        placeholder="How can we help you?"
+                        required
+                ></textarea>
+
+            </div>
+
+
+            <button
+                    type="submit"
+                    class="submit-btn"
+            >
+                Send Message
+            </button>
+
+        </form>
+
+
+        <p id="contactStatus"></p>
+
+    </section>
+
+</main>
+
+
+<script src="/js/user-dashboard.js"></script>
+
+</body>
+
+</html>
